@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void ShowBoard(int board[ROWS][COLS])
+void ShowBoard(int board[][COLS])
 {
   cout << endl;
   for(int h = 0; h < COLS; ++h)
@@ -23,7 +23,7 @@ void ShowBoard(int board[ROWS][COLS])
   }
 }
 
-int LongestRunInCol(int player, int colNumber, int clength, int rlength, int board[ROWS][COLS])
+int LongestRunInCol(int player, int colNumber, int clength, int rlength, int board[][COLS])
 {
   // Construct a single dimensional array from the board
   // to pass to LongestRunInRow
@@ -40,7 +40,7 @@ int LongestRunInCol(int player, int colNumber, int clength, int rlength, int boa
   return LongestRunInRow(/*fill in parameters*/);
 }
 
-void PlayerTurn(int player, int board[ROWS][COLS])
+void PlayerTurn(int player, int board[][COLS])
 {
   cout << "Player " << player << "'s turn." << endl;
   int col;
